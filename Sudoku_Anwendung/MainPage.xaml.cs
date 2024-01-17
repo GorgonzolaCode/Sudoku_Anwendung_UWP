@@ -181,10 +181,9 @@ namespace Sudoku_Anwendung
                     button.Content = value;
                     sudoku.Set(column, row, value);
 
-                    //vheck sudoku
-                    string outputtext = "The sudoku has a contradiction.";
-                    if (sudoku.IsCorrect()) outputtext = "The sudoku has no contradictions.";
-                    textOut.Text = outputtext;
+                    //check sudoku
+                    if (sudoku.IsCorrect()) textOut.Text = "";
+                    else textOut.Text = "The sudoku has a contradiction.";
                 }
             }
             
